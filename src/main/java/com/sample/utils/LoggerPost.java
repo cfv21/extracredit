@@ -28,6 +28,8 @@ public class LoggerPost {
         db.Logout();
     }
 
+
+
     public boolean GetLoggedIn() {
         return db.GetLoggedIn();
     }
