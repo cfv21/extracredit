@@ -64,9 +64,10 @@ public class PostController {
         model.addAttribute("isLoggedIn", pl.GetLoggedIn());
         if (!pl.GetLoggedIn())
             model.addAttribute("loginFailed", true);
-        else
-            return "index";
+        else {
 
+            return "index";
+        }
         return "login";
     }
 
