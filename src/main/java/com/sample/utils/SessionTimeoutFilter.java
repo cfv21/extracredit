@@ -1,11 +1,12 @@
 package com.sample.utils;
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.time.Instant;
-
+@WebFilter(filterName = "SessionTimeoutFilter", urlPatterns = {"/*"})
 public class SessionTimeoutFilter implements Filter {
-    private static final long TIMEOUT_DURATION = 10 * 60 * 1000; // 10 minutes in milliseconds
+    private static final long TIMEOUT_DURATION = 1 * 60 * 1000; // 10 minutes in milliseconds
     private static final String LOGIN_TIME_ATTRIBUTE = "loginTime";
 
     @Override
